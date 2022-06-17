@@ -43,7 +43,7 @@ module.exports = {
     liveReload: true,
     open: true,
     proxy: {
-      "/api": "http://localhost:3000/",
+      "/": "http://localhost:3000/",
     },
   },
 };
