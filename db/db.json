@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "keagan"
+    }
+  ],
+  "readers": [
+    {
+      "id": 1,
+      "user_id": 1
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "year": 1937,
+      "genre_id": 1
+    },
+    {
+      "id": 2,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "year": 1954,
+      "genre_id": 2
+    },
+    {
+      "id": 3,
+      "title": "Call of the Wild",
+      "author": "Jack London",
+      "year": 1903,
+      "genre_id": 3
+    },
+    {
+      "id": 4,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "year": 1951,
+      "genre_id": 3
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Adventure"
+    },
+    {
+      "id": 2,
+      "name": "Fantasy"
+    },
+    {
+      "id": 3,
+      "name": "Historical"
+    }
+  ],
+  "moods" : [
+    {
+      "id": 1,
+      "name": "Happy"
+    },
+    {
+      "id": 2,
+      "name": "Deep"
+    },
+    {
+      "id": 3,
+      "name": "Relaxed"
+    }
+  ]
+}

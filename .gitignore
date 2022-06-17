@@ -1,0 +1,10 @@
+# Node
+package-lock.json
+node_modules
+
+# Generated files
+public/*.js
+
+# Other
+.env
+*.log
