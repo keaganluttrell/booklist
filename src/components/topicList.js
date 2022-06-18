@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BookList from "./bookList";
 
-export default function TopicList({ topic, topicTitle }) {
+export default function TopicList({ topic, topicTitle, handleCart }) {
   const [topicList, setTopicList] = useState([]);
   const topicHeaderString = topic.charAt(0).toUpperCase() + topic.slice(1);
   useEffect(() => {
@@ -17,7 +17,11 @@ export default function TopicList({ topic, topicTitle }) {
       {topicList.map((topic) => (
         <div key={topic.name + topic.id}>
           <h2>{topic.name}</h2>
-          <BookList topic={topic} topicTitle={topicTitle} />
+          <BookList
+            topic={topic}
+            topicTitle={topicTitle}
+            handleCart={handleCart}
+          />
         </div>
       ))}
     </div>

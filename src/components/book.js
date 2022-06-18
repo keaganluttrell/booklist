@@ -1,7 +1,10 @@
 import React from "react";
+import { useRecoilValue } from "recoil";
+import { userState } from "../recoil/atoms";
 
-export default function Book({ book }) {
-  const [added, setAdded] = React.useState(false);
+export default function Book({ book, handleCart }) {
+  const currentUser = useRecoilValue(userState);
+
   return (
     <div>
       <h4>
@@ -10,16 +13,10 @@ export default function Book({ book }) {
       <h5>{book.author}</h5>
       <button
         onClick={(e) => {
-          e.preventDefault();
-          if (!added) {
-            e.target.innerText = "Success";
-          }
-          console.log("Add", book);
-          setAdded(true);
+          handleCart(e, currentUser, book);
         }}
-        disabled={added}
       >
-        Add to Cart
+        CartFn
       </button>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Book from "./book";
 
-export default function BookList({ topic, topicTitle }) {
+export default function BookList({ topic, topicTitle, handleCart }) {
   const [bookList, setBookList] = useState([]);
 
   function getQueryString() {
@@ -22,7 +22,7 @@ export default function BookList({ topic, topicTitle }) {
   return (
     <div>
       {bookList.map((book) => (
-        <Book key={book.title + book.id} book={book} />
+        <Book key={book.title + book.id} book={book} handleCart={handleCart} />
       ))}
     </div>
   );

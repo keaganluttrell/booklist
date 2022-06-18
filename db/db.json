@@ -2,7 +2,23 @@
   "users": [
     {
       "id": 1,
-      "name": "keagan"
+      "name": "keagan",
+      "email": "k@g.n"
+    },
+    {
+      "name": "rick",
+      "email": "r@g.com",
+      "id": 2
+    },
+    {
+      "name": "j",
+      "email": "j@g.com",
+      "id": 3
+    },
+    {
+      "name": "rick",
+      "email": "rick@global.net",
+      "id": 4
     }
   ],
   "readers": [
@@ -59,7 +75,7 @@
       "name": "Historical"
     }
   ],
-  "moods" : [
+  "moods": [
     {
       "id": 1,
       "name": "Happy"
@@ -71,6 +87,13 @@
     {
       "id": 3,
       "name": "Relaxed"
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "books": []
     }
   ]
 }
