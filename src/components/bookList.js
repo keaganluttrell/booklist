@@ -4,14 +4,15 @@ import Book from "./book";
 export default function BookList({ topic, topicTitle }) {
   const [bookList, setBookList] = useState([]);
 
-  function getQueryString(topicTitle) {
+  function getQueryString() {
     if (topicTitle) {
-      return `/books?${topicTitle}=${topic}`;
+      return `/books?${topicTitle}_id=${topic.id}`;
     }
     return "/books";
   }
 
   useEffect(() => {
+    console.log(getQueryString());
     fetch(getQueryString(topicTitle))
       .then((res) => res.json())
       .then((data) => {
