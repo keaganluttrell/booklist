@@ -1,20 +1,31 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./components/app.js";
+import Home from "./pages/home.js";
+import Moods from "./pages/moods.js";
+import Genres from "./pages/genres.js";
+import Cart from "./pages/cart.js";
+import UserHome from "./components/userHome.js";
+import Nav from "./components/nav.js";
+import Books from "./pages/books.js";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        {/* <Route index element={<Home />} /> */}
-        {/* <Route path="teams" element={<Teams />}>
-          <Route path=":teamId" element={<Team />} />
-          <Route path="new" element={<NewTeamForm />} />
-          <Route index element={<LeagueStandings />} />
-        </Route> */}
-      </Route>
-    </Routes>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+function Root() {
+  return (
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/explore/moods" element={<Moods />} />
+        <Route path="/explore/genres" element={<Genres />} />
+        <Route path="/explore/books" element={<Books />} />
+        <Route path="/">
+          <Route index element={<Home />} />
+          <Route path="/user/home" element={<Home />} />
+          <Route path="/user/home/:userid" element={<UserHome />} />
+          <Route path="/user/cart" element={<Cart />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+ReactDOM.render(<Root />, document.getElementById("root"));
